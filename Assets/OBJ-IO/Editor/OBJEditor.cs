@@ -29,17 +29,17 @@ public class OBJWindow : EditorWindow
 		{
 			if (GUILayout.Button("Export OBJ"))
 			{
-				var lOutputPath = EditorUtility.SaveFilePanel("Save Mesh as OBJ", "", m_MeshFilter.name + ".obj", "obj");
+				// var lOutputPath = EditorUtility.SaveFilePanel("Save Mesh as OBJ", "", m_MeshFilter.name + ".obj", "obj");
 				
-				if (File.Exists(lOutputPath))
-				{
-					File.Delete(lOutputPath);
-				}
+				// if (File.Exists(lOutputPath))
+				// {
+				// 	File.Delete(lOutputPath);
+				// }
 				
-				var lStream = new FileStream(lOutputPath, FileMode.Create);
-				var lOBJData = m_MeshFilter.sharedMesh.EncodeOBJ();
-				OBJLoader.ExportOBJ(lOBJData, lStream);
-				lStream.Close();
+				// var lStream = new FileStream(lOutputPath, FileMode.Create);
+				// var lOBJData = m_MeshFilter.sharedMesh.EncodeOBJ();
+				// OBJLoader.ExportOBJ(lOBJData, lStream);
+				// lStream.Close();
 			}
 		}
 		else

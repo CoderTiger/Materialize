@@ -34,3 +34,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+[Ll]ogs*
+
+[Aa]ssets/Plugins/AssetUsageDetector*
+

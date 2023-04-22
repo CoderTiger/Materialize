@@ -22,13 +22,13 @@ public class Example : MonoBehaviour
 	{
 		//	Load the OBJ in
 		var lStream = new FileStream(INPUT_PATH, FileMode.Open);
-		var lOBJData = OBJLoader.LoadOBJ(lStream);
+		// var lOBJData = OBJLoader.LoadOBJ(lStream);
 		var lMeshFilter = GetComponent<MeshFilter>();
-		lMeshFilter.mesh.LoadOBJ(lOBJData);
+		// lMeshFilter.mesh.LoadOBJ(lOBJData);
 		lStream.Close();
 		
 		lStream = null;
-		lOBJData = null;
+		// lOBJData = null;
 
 		//	Wiggle Vertices in Mesh
 		var lVertices = lMeshFilter.mesh.vertices;
@@ -44,8 +44,8 @@ public class Example : MonoBehaviour
 			File.Delete(OUTPUT_PATH);
 		}
 		lStream = new FileStream(OUTPUT_PATH, FileMode.Create);
-		lOBJData = lMeshFilter.mesh.EncodeOBJ();
-		OBJLoader.ExportOBJ(lOBJData, lStream);
+		// lOBJData = lMeshFilter.mesh.EncodeOBJ();
+		// OBJLoader.ExportOBJ(lOBJData, lStream);
 		lStream.Close();
 	}
 }
